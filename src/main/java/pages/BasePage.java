@@ -7,7 +7,7 @@ import java.time.Duration;
 
 public abstract class BasePage {
     protected WebDriver driver;
-    private final int DEFAULT_TIMEOUT = 15;
+    private final int DEFAULT_TIMEOUT = 10;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
