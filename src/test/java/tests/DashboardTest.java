@@ -19,7 +19,7 @@ public class DashboardTest extends BaseTest {
     @Test(description = "Verify all main widgets are visible on the dashboard after login")
     public void testDashboardWidgetsVisibility() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
         Allure.step("Step 2: Initialize Dashboard Page");
         DashboardPage dashboardPage = new DashboardPage(driver);
 

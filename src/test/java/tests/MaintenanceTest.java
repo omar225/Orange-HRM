@@ -17,7 +17,7 @@ public class MaintenanceTest extends BaseTest {
     @Test(description = "Test maintenance module access after password confirmation", priority = 1)
     public void testAccessToMaintenanceModule() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
 
         Allure.step("Step 2: Navigate to Maintenance tab");
         MaintenancePage maintenancePage = new MaintenancePage(driver);
@@ -37,7 +37,7 @@ public class MaintenanceTest extends BaseTest {
     @Test(description = "Test maintenance module access with invalid password",priority = 2)
     public void testInvalidAccessToMaintenanceModule() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
 
         Allure.step("Step 2: Navigate to Maintenance tab");
         MaintenancePage maintenancePage = new MaintenancePage(driver);
@@ -56,7 +56,7 @@ public class MaintenanceTest extends BaseTest {
     @Test(description = "Test access to Maintenance module without entering password", priority = 3)
     public void testAccessWithoutPassword() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
 
         Allure.step("Step 2: Navigate to Maintenance tab");
         MaintenancePage maintenancePage = new MaintenancePage(driver);
