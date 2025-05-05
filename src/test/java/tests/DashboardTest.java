@@ -5,11 +5,8 @@ import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.DashboardPage;
-import pages.MaintenancePage;
 
-import javax.xml.namespace.QName;
 
 @Listeners({AllureTestNg.class})
 public class DashboardTest extends BaseTest {
