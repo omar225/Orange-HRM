@@ -1,8 +1,6 @@
 package pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 public class DashboardPage extends BasePage {
 
     private final By dashboardHeading = By.className("oxd-topbar-header-breadcrumb");
@@ -18,12 +16,12 @@ public class DashboardPage extends BasePage {
     private final By applyLeaveButton = By.xpath("//button[@title='Apply Leave']//*[name()='svg']");
     private final By myLeaveButton = By.xpath("//button[@title='My Leave']//*[name()='svg']");
     private final By myTimesheetButton = By.xpath("//button[@title='My Timesheet']//*[name()='svg']");
-    private final By assignLeave = By.xpath("//h6[normalize-space()='Assign Leave']");
-    private final By leaveList = By.xpath("//h5[normalize-space()='Leave List']");
-    private final By timesheet = By.xpath("//h6[text()= 'Timesheets Pending Action']");
-    private final By applyLeave = By.xpath("//h6[normalize-space()='Apply Leave']");
-    private final By myLeave = By.xpath("//h5[normalize-space()='My Leave List']");
-    private final By myTimesheet = By.xpath("//h6[normalize-space()='My Timesheet']");
+    private final By assignLeave = By.cssSelector(".oxd-text.oxd-text--h6.orangehrm-main-title");
+    private final By leaveList = By.cssSelector(".oxd-text.oxd-text--h5.oxd-table-filter-title");
+    private final By timesheet = By.cssSelector(".oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-level");
+    private final By applyLeave = By.cssSelector(".oxd-text.oxd-text--h6.orangehrm-main-title");
+    private final By myLeave = By.cssSelector(".oxd-text.oxd-text--h5.oxd-table-filter-title");
+    private final By myTimesheet = By.cssSelector(".oxd-text.oxd-text--h6.orangehrm-main-title");
 
 
     public DashboardPage(WebDriver driver) {
@@ -82,27 +80,27 @@ public class DashboardPage extends BasePage {
         return isDisplayed(myTimesheet);
     }
 
-    public void assignLeave() {
+    public void assignLeaveButton() {
         click(assignLeaveButton);
     }
 
-    public void leaveList() {
+    public void leaveListButton() {
         click(leaveListButton);
     }
 
-    public void timeSheets() {
+    public void timeSheetsButton() {
         click(timeSheetsButton);
     }
 
-    public void applyLeave() {
+    public void applyLeaveButton() {
         click(applyLeaveButton);
     }
 
-    public void myLeave() {
+    public void myLeaveButton() {
         click(myLeaveButton);
     }
 
-    public void myTimesheet() {
+    public void myTimesheetButton() {
         click(myTimesheetButton);
     }
 

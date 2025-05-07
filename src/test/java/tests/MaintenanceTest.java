@@ -1,11 +1,9 @@
 package tests;
-
 import io.qameta.allure.*;
 import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.MaintenancePage;
 
 @Listeners({AllureTestNg.class})

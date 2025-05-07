@@ -1,5 +1,4 @@
 package tests;
-
 import io.qameta.allure.*;
 import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
@@ -18,6 +17,7 @@ public class DashboardTest extends BaseTest {
     public void testDashboardWidgetsVisibility() {
         Allure.step("Step 1: Log in using valid credentials");
         login();
+
         Allure.step("Step 2: Initialize Dashboard Page");
         DashboardPage dashboardPage = new DashboardPage(driver);
 
@@ -67,7 +67,7 @@ public class DashboardTest extends BaseTest {
 
 
         Allure.step("Step 4: Click Assign Leave link");
-        dashboardPage.assignLeave();
+        dashboardPage.assignLeaveButton();
 
 
         Allure.step("Step 5: Verify Assign Leave is visible");
@@ -91,7 +91,7 @@ public class DashboardTest extends BaseTest {
 
 
         Allure.step("Step 4: Click Leave list link");
-        dashboardPage.leaveList();
+        dashboardPage.leaveListButton();
 
 
         Allure.step("Step 5: Verify Assign Leave is visible");
@@ -115,7 +115,7 @@ public class DashboardTest extends BaseTest {
 
 
         Allure.step("Step 4: Click My Timesheet link");
-        dashboardPage.timeSheets();
+        dashboardPage.timeSheetsButton();
 
 
         Allure.step("Step 5: Timesheets is visible");
@@ -139,7 +139,7 @@ public class DashboardTest extends BaseTest {
 
 
         Allure.step("Step 4: Click Apply Leave link");
-        dashboardPage.applyLeave();
+        dashboardPage.applyLeaveButton();
 
 
         Allure.step("Step 5: Apply Leave is visible");
@@ -163,7 +163,7 @@ public class DashboardTest extends BaseTest {
 
 
         Allure.step("Step 4: Click My Leave link");
-        dashboardPage.myLeave();
+        dashboardPage.myLeaveButton();
 
 
         Allure.step("Step 5: My Leave List is visible");
@@ -187,7 +187,7 @@ public class DashboardTest extends BaseTest {
 
 
         Allure.step("Step 4: Click My Timesheet link");
-        dashboardPage.myTimesheet();
+        dashboardPage.myTimesheetButton();
 
 
         Allure.step("Step 5: My Timesheet is visible");
