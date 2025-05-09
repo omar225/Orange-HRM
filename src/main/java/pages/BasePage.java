@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.*;
 import java.time.Duration;
 
 public abstract class BasePage {
-    protected WebDriver driver;
+    protected static WebDriver driver;
     private final int DEFAULT_TIMEOUT = 15;
 
     public BasePage(WebDriver driver) {
