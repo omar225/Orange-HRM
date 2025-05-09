@@ -3,14 +3,21 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 
+import java.io.File;
 import java.time.Duration;
 
 public abstract class BasePage {
     protected WebDriver driver;
     private final int DEFAULT_TIMEOUT = 15;
 
-    public BasePage(WebDriver driver) {
+    protected BasePage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    protected void uploadFile(By locator, String filePath) {
+        WebElement uploadElement = driver.findElement(locator);
+        File file = new File(filePath);
+        uploadElement.sendKeys(file.getAbsolutePath());
     }
 
     protected WebElement get(By locator) {
@@ -27,13 +34,22 @@ public abstract class BasePage {
         element.sendKeys(text);
     }
 
-    public boolean isDisplayed(By locator) {
+    protected boolean isDisplayed(By locator) {
         try {
             return get(locator).isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
+
+    protected boolean isEnabled(By locator) {
+        try {
+            return get(locator).isEnabled();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 
     protected WebElement waitForElementVisible(By locator) {
         return waitForElementVisible(locator, DEFAULT_TIMEOUT);

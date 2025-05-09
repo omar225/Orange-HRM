@@ -19,7 +19,7 @@ public class BaseTest {
         driver.get(baseUrl);
     }
 
-    public void Login() {
+    public void login() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("Admin", "admin123");
     }

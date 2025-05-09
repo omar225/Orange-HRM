@@ -5,7 +5,6 @@ import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.MaintenancePage;
 
 @Listeners({AllureTestNg.class})
@@ -17,7 +16,7 @@ public class MaintenanceTest extends BaseTest {
     @Test(description = "Test maintenance module access after password confirmation", priority = 1)
     public void testAccessToMaintenanceModule() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
 
         Allure.step("Step 2: Navigate to Maintenance tab");
         MaintenancePage maintenancePage = new MaintenancePage(driver);
@@ -37,7 +36,7 @@ public class MaintenanceTest extends BaseTest {
     @Test(description = "Test maintenance module access with invalid password",priority = 2)
     public void testInvalidAccessToMaintenanceModule() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
 
         Allure.step("Step 2: Navigate to Maintenance tab");
         MaintenancePage maintenancePage = new MaintenancePage(driver);
@@ -47,7 +46,7 @@ public class MaintenanceTest extends BaseTest {
         maintenancePage.authenticateAndAccess("admin1233");
 
         Allure.step("Step 4: Validate if Error message is displayed after login attempt");
-        Assert.assertTrue(maintenancePage.isInvalidMsgDisplayed(), "Login failed: Invalid credentials.");
+        Assert.assertTrue(maintenancePage.isInvalidMsgDisplayed(), "login failed: Invalid credentials.");
     }
 
     @Feature("Maintenance")
@@ -56,7 +55,7 @@ public class MaintenanceTest extends BaseTest {
     @Test(description = "Test access to Maintenance module without entering password", priority = 3)
     public void testAccessWithoutPassword() {
         Allure.step("Step 1: Log in using valid credentials");
-        Login();
+        login();
 
         Allure.step("Step 2: Navigate to Maintenance tab");
         MaintenancePage maintenancePage = new MaintenancePage(driver);
