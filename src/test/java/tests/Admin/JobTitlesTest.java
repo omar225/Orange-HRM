@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import pages.Admin.JobTitlesPage;
 import tests.BaseTest;
 
-@Feature("Job Titles Page")
+
 @Listeners({AllureTestNg.class})
 public class JobTitlesTest extends BaseTest {
 
@@ -17,6 +17,8 @@ public class JobTitlesTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test to verify if Job Titles page is visible")
     public void testJobTitlesNavigation() {
+        Allure.step("Login as Admin");
+        login();
         JobTitlesPage jobTitlesPage = new JobTitlesPage(driver);
         jobTitlesPage.goToJobTitles();
 
@@ -29,6 +31,8 @@ public class JobTitlesTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test to verify adding a new Job Title")
     public void testAddJobTitle() {
+        Allure.step("Login as Admin");
+        login();
         JobTitlesPage jobTitlesPage = new JobTitlesPage(driver);
         jobTitlesPage.goToJobTitles();
 
@@ -50,6 +54,8 @@ public class JobTitlesTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test to measure the performance of Job Titles page load time")
     public void testJobTitlesPageLoadPerformance() {
+        Allure.step("Login as Admin");
+        login();
         JobTitlesPage jobTitlesPage = new JobTitlesPage(driver);
 
         Allure.step("Measuring load time of Job Titles page");
@@ -69,6 +75,8 @@ public class JobTitlesTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test to add multiple job titles")
     public void testAddMultipleUsers() {
+        Allure.step("Login as Admin");
+        login();
         JobTitlesPage jobTitlesPage = new JobTitlesPage(driver);
         jobTitlesPage.goToJobTitles();
 
@@ -94,6 +102,8 @@ public class JobTitlesTest extends BaseTest {
     @Severity(SeverityLevel.NORMAL)
     @Description("Test to add job title with an empty field")
     public void testAddJobTitleWithEmptyField() {
+        Allure.step("Login as Admin");
+        login();
         JobTitlesPage jobTitlesPage = new JobTitlesPage(driver);
         jobTitlesPage.goToJobTitles();
 
