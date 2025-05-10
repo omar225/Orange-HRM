@@ -31,7 +31,7 @@ public class MaintenanceTest extends BaseTest {
 
     @Feature("Maintenance")
     @Story("Password Verification Failure")
-    @Severity(SeverityLevel.NORMAL)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "Test maintenance module access with invalid password",priority = 2)
     public void testInvalidAccessToMaintenanceModule() {
         Allure.step("Step 1: Log in using valid credentials");
@@ -50,7 +50,7 @@ public class MaintenanceTest extends BaseTest {
 
     @Feature("Maintenance")
     @Story("Empty Password Submission")
-    @Severity(SeverityLevel.MINOR)
+    @Severity(SeverityLevel.CRITICAL)
     @Test(description = "Test access to Maintenance module without entering password", priority = 3)
     public void testAccessWithoutPassword() {
         Allure.step("Step 1: Log in using valid credentials");
