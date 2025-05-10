@@ -1,8 +1,6 @@
 package pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 public class MaintenancePage extends BasePage {
 
     private final By maintenanceTab = By.xpath("//span[text()='Maintenance']");
