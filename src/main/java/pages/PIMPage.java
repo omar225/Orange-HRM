@@ -13,13 +13,13 @@ public class PIMPage extends BasePage {
     private final By dataImportUploadField = By.cssSelector("input[type='file']");
     private final By uploadButton = By.xpath("//button[@type='submit']");
     private final By uploadSuccessMsg = By.xpath("//p[@class='oxd-text oxd-text--p oxd-text--card-body orangehrm-success-message']");
-    private final By uploadErrorMsg = By.xpath("//p[normalize-space()='50 Records Failed to Import']");
+    private final By uploadErrorMsg = By.xpath("(//p[contains(@class, 'orangehrm-error-message')])[1]");
     private final By dataImportHeading = By.xpath("//p[contains(.,'Data Import')]");
     private final By employeeListButton = By.xpath("//a[contains(.,'Employee List')]");
-    private final By selectAllCheckbox = By.xpath("//input[@type='checkbox']");
+    private final By selectAllCheckbox = By.cssSelector("div.oxd-table-header .oxd-checkbox-wrapper");
     private final By deleteButton = By.xpath("//button[contains(.,'Delete Selected')] ");
     private final By confirmDeleteButton = By.xpath("//button[contains(.,'Yes, Delete')] ");
-    private final By recordsFoundElement = By.xpath("//span[contains(.,'Records Found')]");
+    private final By recordsFoundElement = By.cssSelector("div.orangehrm-horizontal-padding.orangehrm-vertical-padding span.oxd-text.oxd-text--span");
 
     // File paths for CSV files
     private String validCSVFile = System.getProperty("user.dir") + "/src/main/resources/DataImportFiles/OHRMData.csv";
@@ -81,6 +81,7 @@ public class PIMPage extends BasePage {
     public boolean isUploadErrorMsgDisplayed() {
         return isDisplayed(uploadErrorMsg);
     }
+
 
     public boolean isDataImportHeadingDisplayed() {
         return isDisplayed(dataImportHeading);
