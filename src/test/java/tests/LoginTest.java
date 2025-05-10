@@ -164,7 +164,7 @@ public class LoginTest extends BaseTest {
 
     @Feature("login")
     @Story("Orange HRM - login Functionality")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Test login with special characters in username and password" ,priority = 10)
     public void testLoginWithSpecialCharactersInUsernameAndPassword() {
         Allure.step("Step 1: Initialize login Page");
@@ -180,7 +180,7 @@ public class LoginTest extends BaseTest {
 
     @Feature("login")
     @Story("Orange HRM - login Functionality")
-    @Severity(SeverityLevel.CRITICAL)
+    @Severity(SeverityLevel.MINOR)
     @Test(description = "Test Forgot Password link" ,priority = 11)
     public void testForgotPassword() {
         Allure.step("Step 1: Initialize login Page");

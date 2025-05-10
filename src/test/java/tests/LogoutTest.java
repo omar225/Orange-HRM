@@ -8,7 +8,7 @@ import pages.LoginPage;
 import pages.LogoutPage;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+
 
 @Listeners({AllureTestNg.class})
 public class LogoutTest extends BaseTest {
@@ -55,7 +55,7 @@ public class LogoutTest extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     public void testSuccessfulLogoutRedirect() {
         Allure.step("Step 1: Login to OrangeHRM with valid credentials");
-        Login();
+        login();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100000));
 
 
