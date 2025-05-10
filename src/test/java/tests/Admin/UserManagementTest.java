@@ -16,7 +16,7 @@ import java.time.Duration;
 public class UserManagementTest extends BaseTest {
 
     @Test(description = "Navigate to User Management page")
-    @Story("Navigation")
+    @Story("Orange HRM - Employee Management")
     @Severity(SeverityLevel.NORMAL)
     @Description("Ensure that admin can navigate to the User Management page.")
     public void testNavigateToUserManagementPage() {
@@ -29,8 +29,8 @@ public class UserManagementTest extends BaseTest {
     }
 
     @Test(description = "Search for an existing user")
-    @Story("Search")
-    @Severity(SeverityLevel.CRITICAL)
+    @Story("Orange HRM - Employee Management")
+    @Severity(SeverityLevel.NORMAL)
     @Description("Verify that searching with an existing username returns results.")
     public void testSearchExistingUser() {
         login();
@@ -48,7 +48,7 @@ public class UserManagementTest extends BaseTest {
     }
 
     @Test(description = "Filter users by role")
-    @Story("Filter")
+    @Story("Orange HRM - Employee Management")
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify that filtering users by role works as expected.")
     public void testFilterByUserRole() {
@@ -70,7 +70,7 @@ public class UserManagementTest extends BaseTest {
     }
 
     @Test(description = "Filter users by status")
-    @Story("Filter")
+    @Story("Orange HRM - Employee Management")
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify that filtering users by status works as expected.")
     public void testFilterByStatus() {
@@ -86,8 +86,8 @@ public class UserManagementTest extends BaseTest {
     }
 
     @Test(description = "Reset filter fields")
-    @Story("Reset")
-    @Severity(SeverityLevel.MINOR)
+    @Story("Orange HRM - Employee Management")
+    @Severity(SeverityLevel.NORMAL)
     @Description("Verify that reset button clears all filters.")
     public void testResetFilters() {
         login();
@@ -104,7 +104,7 @@ public class UserManagementTest extends BaseTest {
     }
 
     @Test(description = "Add user button is clickable")
-    @Story("Add User")
+    @Story("Orange HRM - Employee Management")
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify that the Add button is clickable and navigates to the add user page.")
     public void testAddButtonClickable() {

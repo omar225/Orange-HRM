@@ -6,7 +6,6 @@ import pages.BasePage;
 
 public class UserManagementPage extends BasePage {
 
-    // Locators
     private final By searchButton = By.xpath("//button[@type='submit']");
     private final By resetButton = By.xpath("//button[normalize-space()='Reset']");
     private final By addButton = By.xpath("//button[normalize-space()='Add']");
@@ -16,7 +15,6 @@ public class UserManagementPage extends BasePage {
     private final By statusDropdown = By.xpath("//label[text()='Status']/following::div[contains(@class,'oxd-select-text')]");
     private final By userTable = By.xpath("//div[contains(@class,'orangehrm-paper-container')]");
     private final By dropdownOptions = By.xpath("//div[@role='listbox']//span");
-    private final By addUserTable = By.className("orangehrm-card-container");
 
     public UserManagementPage(WebDriver driver) {
         super(driver);
