@@ -55,3 +55,5 @@ Our focus will be on:
    ```bash
    git clone https://github.com/omar225/orangehrm-automation.git
  
+## Jira CSV File
+[Jira Export CSV (all fields) 20250511042611.csv](https://github.com/user-attachments/files/20146492/Jira.Export.CSV.all.fields.20250511042611.csv)
