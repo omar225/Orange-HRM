@@ -59,4 +59,10 @@ Our focus will be on:
 [Jira Export CSV (all fields) 20250511042611.csv](https://github.com/user-attachments/files/20146492/Jira.Export.CSV.all.fields.20250511042611.csv)
 
 ## Test Summary Report
-[Test_Summary_Report.pdf](https://github.com/user-attachments/files/20148140/Test_Summary_Report.pdf)
+[Test_Summary_Report.pdf](https://github.com/user-attachments/files/20148240/Test_Summary_Report.pdf)
+
+## Presentation
+https://www.canva.com/design/DAGnE1dl3eE/tj4DXQ3QdF0XAloYKggrUw/view?utm_content=DAGnE1dl3eE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h06cb105ce3
+
+[Software Testing for OrangeHRM.pdf](https://github.com/user-attachments/files/20148239/Software.Testing.for.OrangeHRM.pdf)
+
